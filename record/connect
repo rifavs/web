@@ -1,0 +1,40 @@
+<?php 
+    $servername="localhost";
+    $username="root";
+    $password="";
+    $dbname="names";
+
+    $conn=new mysqli($servername,$username,$password,$dbname);
+
+    if ($conn->connect_error) 
+    {
+        die("Connection failed".$conn->connect_error);
+    }
+
+    $sql="SELECT id, firstname ,lastname,age from stname";
+    $result=$conn->query($sql);
+
+    if ($result->num_rows>0) 
+    {
+        echo "<center>";
+        echo "<h1>Students Name</th><br><br>";
+
+        echo "<table border='1' cellpadding='10px' cellspacing='0'>";
+        echo "<tr><th>ID</th><th>NAME</th><th>LASTNAME</th><th>AGE</th></tr>";     
+
+
+        while ($row=$result->fetch_assoc()) 
+        {
+            echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]."</td><td>".$row["lastname"]."</td><td>".$row["age"]."</td></tr>";
+        }
+        echo "</center>";
+        echo "</table>";
+    }
+    else
+    {
+        echo "No results found";
+    }
+
+    $conn->close();
+
+?>

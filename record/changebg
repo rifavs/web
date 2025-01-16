@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>bgcolor</title>
+</head>
+<body>
+	<center>
+	<h1><b>Change Background Colour</b></h1>
+	<br><br><br><br><br><br>
+	<button style="width=200px; height: 60px; " onclick="changeBg()">Change</button>
+	</center>
+	<script>
+		var i=0;
+		function changeBg()
+		{
+			const colors=['violet','indigo','blue','green','yellow','orange','red'];
+			document.body.style.background=colors[i];
+			i++;
+		}
+	</script>
+
+</body>
+</html>

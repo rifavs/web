@@ -1,0 +1,40 @@
+function validateForm(event)
+{
+    var fname=document.getElementById('fname').value.trim();
+    var phone=document.getElementById('phone').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var username=document.getElementById('username').value.trim();
+    var password=document.getElementById('password').value;
+    var conpassword=document.getElementById('conpassword').value;
+
+    event.preventDefault();
+
+    if (fname === "" || phone === "" || email === "" || username === "" || password === "" || conpassword === "")
+    {
+        alert("All fields are required");
+        return false;
+    }
+
+    if (phone.length !== 10)
+    {
+        alert("Phone is atleast 10 digits");
+        return false;
+    }
+
+    if (password.length<8)
+    {
+        alert("Password atleast 8 digits");
+        return false;
+    }
+
+    if (password !== conpassword) 
+    {
+        alert("Password doesn't match");
+        return false;
+    }
+
+    alert("Successfully registered");
+
+    document.getElementById("registrationForm").reset();
+   
+}

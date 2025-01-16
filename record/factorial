@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>factorial</title>
+	<style>
+		.output{
+			background-color: paleturquoise;
+			font-family: sans-serif;
+			padding:30px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Factorial of number</h2>
+	<div class="output">
+		<?php
+			function factorial($n){
+				if ($n<0) {
+							return "Factorial is not defined for negative number";
+						}
+				elseif ($n==0) {
+							return 1;
+						}	
+				else{
+					return $n * factorial($n-1);
+				}
+			}
+			$number=-7;
+			$result=factorial($number);
+			echo "The factorial of $number is $result";
+		?>
+	</divt>
+
+</body>
+</html>

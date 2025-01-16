@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>sort</title>
+	<style>
+		body{
+			background-color: purple;
+			font-family: sans-serif;
+		}
+		pre{
+			background-color: lightpink;
+		}
+	</style>
+</head>
+<body>
+	<h1><center>Student Names</center></h1>
+	<?php 
+		echo "Enter students' names:"
+		read students
+		echo "<h2>Original Array";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
+
+		asort($students);
+		echo "Array sorted with asort():";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
+
+		arsort($students);
+		echo "Array sorted with arsort():";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
+		?>
+		
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Online Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .submit-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Online Exam</h1>
+
+    <form id="examForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <h3>1. What is 2 + 2?</h3>
+            <input type="radio" name="q1" value="a"> 3<br>
+            <input type="radio" name="q1" value="b"> 4<br>
+            <input type="radio" name="q1" value="c"> 5<br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h3>2. What is the capital of France?</h3>
+            <input type="radio" name="q2" value="a"> Berlin<br>
+            <input type="radio" name="q2" value="b"> Madrid<br>
+            <input type="radio" name="q2" value="c"> Paris<br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h3>3. Which planet is known as the Red Planet?</h3>
+            <input type="radio" name="q3" value="a"> Earth<br>
+            <input type="radio" name="q3" value="b"> Mars<br>
+            <input type="radio" name="q3" value="c"> Venus<br>
+        </div>
+
+        <button type="button" class="submit-button" onclick="submitExam()">Submit Exam</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+    function submitExam() {
+        const correctAnswers = { q1: 'b', q2: 'c', q3: 'b' };
+        let score = 0;
+        
+    
+        for (let i = 1; i <= 3; i++) {
+            if (document.forms["examForm"]["q" + i].value === correctAnswers["q" + i]) score++;
+        }
+
+        document.getElementById("result").innerHTML = `<h2>Your Score: ${score} out of 3</h2>`;
+    }
+</script>
+
+
+</body>
+</html>

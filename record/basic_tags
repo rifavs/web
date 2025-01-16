@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Farook College</title>
+</head>
+<body>
+
+    <h1><center><font color="purple">FAROOK COLLEGE</font></center></h1>
+    <center><img src="C:\Users\More\Desktop\rifa\python\farook.jpg"></center>
+    <p>Farook College is a significant landmark that marks the renaissance of Kerala Muslims. The college was founded in 1948 to enlighten and empower a community debilitated by oppressive colonial practices and regressive local perceptions. The Rouzathul Uloom Association, the parent body of the educational complex on the campus, took the lead in transforming the social fabric of the region by initiating a secular and modern educational paradigm, committed to serving the economically and socially marginalised sections of society
+
+    Farook college was the only First Grade College in Central Malabar at the time of its inception and was originally affiliated to the Madras University. Following the states reorganization, the college came under the University of Kerala in 1957 and the University of Calicut in 1968. Farook college, currently, is the biggest residential post-graduate institution in the state. It offers 22 undergraduate and 16 post- graduate programmes. Eleven of the P.G. Departments are recognized research centres, offering Ph D programmes.</p><br>
+    <h2><font color="red"><i>SISTER INSTITUTION</i></font></h2>
+    <font color="grey">
+    <ol>
+        <li>Rauzathul uloom arabic college</li>
+        <li>Farook Training College</li>
+        <li>Farook institute of management studies</li>
+        <li>Farook institute of teacher education</li>
+        <li>Farook higher secondary school</li>
+    </ol><br>
+    <h3><font color="red">FUNDING AGENCIES</font></h3>
+    <font color="grey">
+    <ul>
+        <li>RUSA</li>
+        <li>Paramash scheme</li>
+        <li>DST-FST</li>
+    </ul>
+    </font>
+</body>
+</html>

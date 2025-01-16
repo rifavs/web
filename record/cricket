@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Players</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: green;
+            color: white;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: mintcream;
+            width: 50%;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #3b3a30;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Enter Cricket Players</h2>
+        <form method="post">
+            <label for="players">Enter comma-separated player names:</label>
+            <input type="text" name="players" id="players" required>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $players = explode(",", $_POST['players']); // Split input into array
+            echo "<h3>Cricket Players List</h3>";
+            echo "<table>";
+            echo "<tr><th>Player Name</th></tr>";
+            foreach ($players as $player) {
+                echo "<tr><td>" . htmlspecialchars(trim($player)) . "</td></tr>";
+            }
+            echo "</table>";
+        }
+        ?>
+    </center>
+</body>
+</html>

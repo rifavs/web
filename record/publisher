@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <!-- Form to Add a New Book -->
+    <h2>Add a New Book</h2>
+    <form action="add_book.php" method="post"> <!-- Points to add_book.php -->
+        <label>Accession Number:</label>
+        <input type="number" name="accession_number" required><br><br>
+        <label>Title:</label>
+        <input type="text" name="title" required><br><br>
+        <label>Authors:</label>
+        <input type="text" name="authors" required><br><br>
+        <label>Edition:</label>
+        <input type="text" name="edition"><br><br>
+        <label>Publisher:</label>
+        <input type="text" name="publisher"><br><br>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <!-- Form to Search for a Book -->
+    <h2>Search for a Book</h2>
+    <form action="search_book.php" method="get"> <!-- Points to search_book.php -->
+        <label>Title:</label>
+        <input type="text" name="title" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
